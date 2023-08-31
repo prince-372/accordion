@@ -61,7 +61,7 @@
     display: block;
 }
 
-.accordion-items1.active div div p .group-1{
+.accordion-items1.active div div p.group-1{
     color: black;
 }
 
