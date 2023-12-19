@@ -12,71 +12,68 @@
 
 <body>
     <section class="min-vh-100 d-flex">
-        <div class="container flex-grow-1 d-flex align-items-center justify-content-center">
+        <div class="container d-flex align-items-center justify-content-center">
             <div>
-                <p class="f-accordian">Accordian</p>
-                <div class="f-card mt-5">
+                <h1 class="fs-large fw-normal text-gray text-center ff-inter">Accordian</h1>
+                <div class="accordian-item mt-5 ">
                     <div class="accordian">
-                        <div class="accordion-items1 mx-auto mt-3">
+                        <div class="accbox mx-auto mt-3">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <p class="group-1">Group-1</p>
+                                    <p class="group-1 fs-small fw-normal ff-inter text-gray  p-0 m-0">Group-1</p>
                                 </div>
                                 <div class="arrow"><img src="./assets/image/arrow.png" alt="arrow" class="arrow"></div>
                             </div>
-                            <p class="content">
+                            <p class="content fs-small fw-normal text-gray ff-inter lh-150 pt-3">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita iure inventore voluptates nulla natus amet mollitia? Quam hic praesentium temporibus et! Quod pariatur nostrum provident perferendis quia inventore non facilis.
+                        </div>
+                        <div class="accbox mx-auto mt-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <p class="group-1 fs-small fw-normal ff-inter text-gray p-0 m-0">Group-1</p>
+                                </div>
+                                <div class="arrow"><img src="./assets/image/arrow.png" alt="arrow" class="arrow"></div>
+                            </div>
+                            <p class="content fs-small fw-normal text-gray ff-inter lh-150 pt-3">
                                 Nibh dictum nulla morbi ornare. Varius sit at eget nunc. Nibh dictum nulla morbi ornare.
                                 Varius
                                 sit at eget nunc. Nibh
                                 dictum nulla morbi ornare. Varius sit at eget nunc.</p>
                         </div>
-                        <div class="accordion-items1 mx-auto mt-3">
+                        <div class="accbox mx-auto mt-3">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <p class="group-1">Group-1</p>
+                                    <p class="group-1 fs-small fw-normal ff-inter text-gray p-0 m-0">Group-1</p>
                                 </div>
                                 <div class="arrow"><img src="./assets/image/arrow.png" alt="arrow" class="arrow"></div>
                             </div>
-                            <p class="content">
+                            <p class="content fs-small fw-normal text-gray ff-inter lh-150 pt-3">
                                 Nibh dictum nulla morbi ornare. Varius sit at eget nunc. Nibh dictum nulla morbi ornare.
                                 Varius
                                 sit at eget nunc. Nibh
                                 dictum nulla morbi ornare. Varius sit at eget nunc.</p>
                         </div>
-                        <div class="accordion-items1 mx-auto mt-3">
+                        <div class="accbox mx-auto mt-3">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <p class="group-1">Group-1</p>
+                                    <p class="group-1 fs-small fw-normal ff-inter text-gray p-0 m-0">Group-1</p>
                                 </div>
                                 <div class="arrow"><img src="./assets/image/arrow.png" alt="arrow" class="arrow"></div>
                             </div>
-                            <p class="content">
+                            <p class="content fs-small fw-normal text-gray ff-inter lh-150 pt-3">
                                 Nibh dictum nulla morbi ornare. Varius sit at eget nunc. Nibh dictum nulla morbi ornare.
                                 Varius
                                 sit at eget nunc. Nibh
                                 dictum nulla morbi ornare. Varius sit at eget nunc.</p>
                         </div>
-                        <div class="accordion-items1 mx-auto mt-3">
+                        <div class="accbox mx-auto mt-3">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <p class="group-1">Group-1</p>
+                                <p class="group-1 fs-small fw-normal ff-inter text-gray p-0 m-0">Group-1</p>
                                 </div>
                                 <div class="arrow"><img src="./assets/image/arrow.png" alt="arrow" class="arrow"></div>
                             </div>
-                            <p class="content">
-                                Nibh dictum nulla morbi ornare. Varius sit at eget nunc. Nibh dictum nulla morbi ornare.
-                                Varius
-                                sit at eget nunc. Nibh
-                                dictum nulla morbi ornare. Varius sit at eget nunc.</p>
-                        </div>
-                        <div class="accordion-items1 mx-auto mt-3">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                <p class="group-1">Group-1</p>
-                                </div>
-                                <div class="arrow"><img src="./assets/image/arrow.png" alt="arrow" class="arrow"></div>
-                            </div>
-                            <p class="content">
+                            <p class="content fs-small fw-normal text-gray ff-inter lh-150 pt-3">
                                 Nibh dictum nulla morbi ornare. Varius sit at eget nunc. Nibh dictum nulla morbi ornare.
                                 Varius
                                 sit at eget nunc. Nibh
@@ -87,10 +84,20 @@
             </div>
         </div>
     </section>
-    <script src="./assets/js/add.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+        <script>
+            let accordion = document.querySelectorAll(".accbox")
+
+accordion.forEach(function (show) {
+    show.addEventListener("click", function () {
+        const hide = document.querySelector(".active")
+        show.classList.toggle("active")
+        hide && hide.classList.remove("active")
+    })
+});
+        </script>
 </body>
 
 </html>
